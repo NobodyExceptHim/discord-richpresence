@@ -1,9 +1,0 @@
-{
-    "name": "Discord RichPresence",
-    "version": "0.0.1",
-    "description": "Set Discord's rpc directly from the app itself",
-    "author": "Showdey",
-    "license": "MIT",
-    "repo": "https://github.com/NobodyExceptHim/discord-richpresence",
-    "dependencies": [ "pc-commands" ]
-}
