@@ -29,7 +29,7 @@ module.exports = class DiscordRPC extends Plugin {
         const timestamp = new Date().getTime();
 
         const setActivity = async () => {
-            switch (this.settings.get('timestamp')) {
+            switch (this.settings.get('timestamp', false)) {
                 case true: {
                     rpc.setActivity({
                         details: this.settings.get('lineone', 'Hello!'),
