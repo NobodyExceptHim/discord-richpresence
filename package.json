@@ -1,0 +1,23 @@
+{
+  "name": "discord-richpresence",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NobodyExceptHim/discord-richpresence.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NobodyExceptHim/discord-richpresence/issues"
+  },
+  "homepage": "https://github.com/NobodyExceptHim/discord-richpresence#readme",
+  "dependencies": {
+    "discord-rpc": "^3.1.4"
+  }
+}
