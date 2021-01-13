@@ -54,8 +54,8 @@ module.exports = class DiscordRPC extends Plugin {
                 }
                 case true: {
                     rpc.setActivity({
-                        details: this.settings.get('lineone', '  '),
-                        state: this.settings.get('linetwo', '  '),
+                        details: '  ',
+                        state: '  ',
                     });
                     break;
                 }
