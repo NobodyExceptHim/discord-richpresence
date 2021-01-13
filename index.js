@@ -26,15 +26,25 @@ module.exports = class DiscordRPC extends Plugin {
             clientId: this.settings.get('IDset', '790602350612054026')
         });
 
-        const timestamp = new Date().getTime();
+        const SetInfo = {
+            'timestamp': new Date().getTime(),
+            'lineone': 'Hello!',
+            'linetwo': 'I am cool.'
 
+        }
+        var tst = 0
         const setActivity = async () => {
-            switch (this.settings.get('timestamp', false)) {
-                case true: {
+            if (this.settings.get('timestamp', false) == false) {
+                tst = null
+            } else if (this.settings.get('timestamp', false) == true) {
+                tst = SetInfo.timestamp
+            } 
+            switch(this.settings.get('clearMode', false)){
+                case false: {
                     rpc.setActivity({
-                        details: this.settings.get('lineone', 'Hello!'),
-                        state: this.settings.get('linetwo', 'I am cool.'),
-                        startTimestamp: timestamp,
+                        details: this.settings.get('lineone', SetInfo.lineone),
+                        state: this.settings.get('linetwo', SetInfo.linetwo),
+                        startTimestamp: tst,
                         largeImageKey: this.settings.get('largeimage', null),
                         largeImageText: this.settings.get('largeimagetext', null),
                         smallImageKey: this.settings.get('smallimage', null),
@@ -42,14 +52,10 @@ module.exports = class DiscordRPC extends Plugin {
                     });
                     break;
                 }
-                case false: {
+                case true: {
                     rpc.setActivity({
-                        details: this.settings.get('lineone', 'Hello!'),
-                        state: this.settings.get('linetwo', 'I am cool.'),
-                        largeImageKey: this.settings.get('largeimage', null),
-                        largeImageText: this.settings.get('largeimagetext', null),
-                        smallImageKey: this.settings.get('smallimage', null),
-                        smallImageText: this.settings.get('smallimagetext', null)
+                        details: this.settings.get('lineone', '  '),
+                        state: this.settings.get('linetwo', '  '),
                     });
                     break;
                 }
